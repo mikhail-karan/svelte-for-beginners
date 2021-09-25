@@ -7,7 +7,7 @@
 </script>
 
 <main class="flex flex-col justify-center items-center h-screen space-y-4">
-  {count}
+  <h1>{count}</h1>
   <button on:click="{increment}" class="btn btn-primary">primary</button> 
 </main>
 
