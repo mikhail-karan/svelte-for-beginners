@@ -1,9 +1,9 @@
 <script>
   let active = 1;
 
-  function changeActive(activeNum){
-    active = activeNum
-    console.log(activeNum)
+  function changeActive(activeNum) {
+    active = activeNum;
+    console.log(activeNum);
   }
 </script>
 
