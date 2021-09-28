@@ -1,27 +1,19 @@
 <script>
-  let active = 1;
+  import data from './data.json'
 
-  function changeActive(activeNum) {
-    active = activeNum;
-    console.log(activeNum);
-  }
+  let posts = data.data
 </script>
 
 <main class="flex flex-col justify-center items-center h-screen space-y-4">
-  <div class="btn-group">
-    <button
-      on:click={() => changeActive(1)}
-      class="btn btn-lg {active === 1 ? 'btn-active' : ''}">Large</button
-    >
-    <button
-      on:click={() => changeActive(2)}
-      class="btn btn-lg {active === 2 ? 'btn-active' : ''}">Large</button
-    >
-    <button
-      on:click={() => changeActive(3)}
-      class="btn btn-lg {active === 3 ? 'btn-active' : ''}">Large</button
-    >
-  </div>
+    {#each posts as post}
+    <div class="card bordered w-80 bg-primary">
+      <div class="card-body">
+        <h2 class="card-title">{post.author}</h2> 
+        <p>{post.post}</p> 
+  
+      </div>
+    </div>
+  {/each}
 </main>
 
 <style>
