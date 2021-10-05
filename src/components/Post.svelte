@@ -3,7 +3,7 @@
   export let author
   export let post
   export let id
-  export let deletePost
+  import {posts} from '../stores'
 
   let timeOnScreen = 0
   let timeInterval = null
@@ -19,10 +19,16 @@
     clearInterval(timeInterval)
   })
 
+  function deletePost(){
+    const deleteIndex = $posts.findIndex(post => post.id === id)
+    $posts.splice(deleteIndex, 1)
+    $posts = $posts
+  }
+
 </script>
 
 <div class="card bordered w-80 bg-primary">
-  <div on:click="{() => deletePost(id)}" class="absolute right-0 pr-2 text-error text-2xl">
+  <div on:click="{deletePost}" class="absolute right-0 pr-2 text-error text-2xl">
     x
   </div>
   <div class="absolute left-0 pl-2 text-white">

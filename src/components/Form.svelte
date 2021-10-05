@@ -1,12 +1,23 @@
 <script>
-  export let addPost
+  import {posts} from '../stores'
+  import {navigate} from 'svelte-navigator'
   let author = '';
   let post = '';
 
-  function sendAddPost(){
-    addPost(author, post)
+  let arrayInc = 3
+
+  function addPost(){
+    const _post = {
+      id: ++arrayInc,
+      author: author,
+      post: post
+    }
+
+    $posts.push(_post)
+    $posts = $posts
     author = ''
     post = ''
+    navigate('/posts')
   }
 </script>
 
@@ -20,5 +31,5 @@
     <span class="label-text">Post</span>
   </label> 
   <textarea bind:value="{post}" name="post" class="textarea h-24 textarea-bordered textarea-primary" placeholder="Bio"></textarea>
-  <button on:click="{sendAddPost}" class="btn btn-primary mt-4">Submit</button> 
+  <button on:click="{addPost}" class="btn btn-primary mt-4">Submit</button> 
 </div> 
