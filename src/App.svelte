@@ -7,8 +7,10 @@
 
 </script>
 
+
 <Router>
   <main class="flex flex-col justify-center items-center h-screen space-y-4">
+    {@debug $posts}
     <Nav />
     <Route>
       <Form />
