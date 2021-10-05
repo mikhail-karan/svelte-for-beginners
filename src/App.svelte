@@ -7,9 +7,11 @@
 
   let posts = data.data
 
+  let arrayInc = 3
+
   function addPost(author, post){
     const _post = {
-      id: posts.length +1,
+      id: ++arrayInc,
       author: author,
       post: post
     }
@@ -17,6 +19,12 @@
     posts.push(_post)
     posts = posts
     navigate('/posts')
+  }
+
+  function deletePost(id){
+    const deleteIndex = posts.findIndex(post => post.id === id)
+    posts.splice(deleteIndex, 1)
+    posts = posts
   }
 </script>
 
@@ -29,7 +37,7 @@
     <Route path="posts">
       <div class="overflow-auto space-y-4 p-4">
         {#each posts.reverse() as post}
-        <Post {...post} />
+        <Post deletePost={deletePost} {...post} />
         {/each}
       </div>
     </Route>
