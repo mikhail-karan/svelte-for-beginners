@@ -1,14 +1,17 @@
 <script>
-  let count = 1
+  let number = 1;
 
-  function increment(){
-    count++
+  function add5() {
+    number += 5;
   }
+
+  $: multiple = number*2
 </script>
 
 <main class="flex flex-col justify-center items-center h-screen space-y-4">
-  <h1>{count}</h1>
-  <button on:click="{increment}" class="btn btn-primary">primary</button> 
+  <p>The number is: {number}</p>
+  <button on:click="{add5}" class="btn btn-primary">Add 5</button>
+  <p>The number mutiplied by 2 is {multiple}</p>
 </main>
 
 <style>
