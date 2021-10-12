@@ -6,4 +6,5 @@
 <div class="flex space-x-4">
   <Link class="{$location.pathname === '/'? 'underline' : ''}" to="/">Add Post</Link>
   <Link class="{$location.pathname === '/posts'? 'underline' : ''}" to="/posts">Posts</Link>
+  <Link class="{$location.pathname === '/about'? 'underline' : ''}" to="/about">About</Link>
 </div>
