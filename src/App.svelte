@@ -21,6 +21,10 @@
       on:click={() => changeActive(3)}
       class="btn btn-lg {active === 3 ? 'btn-active' : ''}">Large</button
     >
+    <button
+      on:click={() => changeActive(4)}
+      class="btn btn-lg {active === 4 ? 'btn-active' : ''}">Large</button
+    >
   </div>
 </main>
 
