@@ -3,6 +3,7 @@
   import Post from './components/Post.svelte'
   import Form from './components/Form.svelte'
   import Nav from './components/Nav.svelte'
+  import About from './components/About.svelte'
   import {Router, Route, navigate} from 'svelte-navigator'
 
   let posts = data.data
@@ -40,6 +41,9 @@
         <Post deletePost={deletePost} {...post} />
         {/each}
       </div>
+    </Route>
+    <Route path="about">
+      <About name="Mike" about="Front-end web developer with 7+ years of experience" />
     </Route>
   </main>
 </Router>
