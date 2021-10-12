@@ -2,6 +2,7 @@
   import data from './data.json'
 
   let author = '';
+  let date = '';
   let post = '';
 
   let posts = data.data
@@ -10,6 +11,7 @@
     const _post = {
       id: posts.length +1,
       author: author,
+      date: date,
       post: post
     }
 
@@ -18,6 +20,7 @@
 
     author = ""
     post = ""
+    date = ""
   }
 </script>
 
@@ -29,6 +32,10 @@
       <span class="label-text">Author</span>
     </label> 
     <input bind:value="{author}" name="author" type="text" placeholder="username" class="input input-primary input-bordered">
+    <label for="date" class="label">
+      <span class="label-text">Date</span>
+    </label> 
+    <input bind:value="{date}" name="date" type="date" placeholder="username" class="input input-primary input-bordered">
     <label for="post" class="label">
       <span class="label-text">Post</span>
     </label> 
@@ -41,6 +48,7 @@
     <div class="card bordered w-80 bg-primary">
       <div class="card-body">
         <h2 class="card-title">{post.author}</h2>
+        <p>{post.date}</p>
         <p>{post.post}</p>
       </div>
     </div>

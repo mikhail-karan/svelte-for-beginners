@@ -3,16 +3,19 @@
     {
       "id": 1,
       "author": "Mike",
+      "date": "2021-10-13",
       "post": "This is some text"
     },
     {
       "id": 2,
       "author": "Matt",
+      "date": "2021-10-11",
       "post": "Lets add some more text to display"
     },
     {
       "id": 3,
       "author": "Jeff",
+      "date": "2021-10-10",
       "post": "This is some random text here"
     }
   ]
