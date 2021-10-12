@@ -2,6 +2,7 @@
   import data from './data.json'
   import Post from './components/Post.svelte'
   import Form from './components/Form.svelte'
+  import Header from './components/Header.svelte'
 
   
 
@@ -20,6 +21,7 @@
 </script>
 
 <main class="flex flex-col justify-center items-center h-screen space-y-4">
+  <Header name="Mike" about="Frontend web developer with 7+ years of experience" />
   <Form addPost={addPost} />
   <div class="overflow-auto space-y-4 p-4">
     {#each posts.reverse() as post}
