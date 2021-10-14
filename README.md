@@ -15,4 +15,4 @@ This is the repository for the Svelte for Beginners Udemy course
 
 ## How it works
 
-The repository is broken up into 9 lessons, 1 branch per lesson. The lessons also have a assosiated assignment branch that gives **one possible** solution to the assignment. 
+The repository is broken up into 9 lessons, 2 branches per lesson. One branch for the onscreen lessons and another assignment branch that gives **one possible** solution to the assignment. 
