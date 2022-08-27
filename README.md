@@ -2,7 +2,7 @@
 
 This is the repository for the Svelte for Beginners Udemy course
 
-[Svelte for Beginners]()
+[Svelte for Beginners](https://www.udemy.com/course/svelte-for-beginners)
 
 ## Recommended IDE Setup
 
